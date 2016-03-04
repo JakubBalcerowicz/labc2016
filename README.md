@@ -13,7 +13,6 @@ Labolatorium 1(lab01)
 * [ ] [Zadanie 4(lab01/zad4.c)
 * [ ] [Zadanie 5(lab01/zad5.c)
 * [ ] [Zadanie 6(lab01/zad6.c)
-* 
 
 
 Labolatorium 2(lab02)
