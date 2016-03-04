@@ -1,6 +1,8 @@
 # labc2016
 Labolatorium z C 2016/2017
+
 Zadania https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/index.html#lab
+
 S.Sokołowski
 Jezyki Programowania, rok 1
 
