@@ -35,7 +35,7 @@ Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 
 |typ        |       wartosc min   |          wartosc max|       ziarno| precyzja|we/wy|
 |-----------|---------------------|---------------------|-------------|---------|-----|
-|short      |               -32768|:              32767:|             |         | i   |
+|short      |               -32768|                32767|             |         | i   |
 |int        |               -32768|                32767|             |         | d   |
 |long       | -9223372036854775808|  9223372036854775807|             |         | li  |
 |long long  | -9223372036854775808|  9223372036854775807|             |         | lli |
