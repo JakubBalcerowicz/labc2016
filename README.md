@@ -27,10 +27,10 @@ Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 
 
 
-* [x] [Zadanie 0(lab03/zad0.c)
-* [ ] [Zadanie 1(lab03/zad1.c)
-* [ ] [Zadanie 2(lab03/zad2.c)
-* [ ] [Zadanie 3(lab03/zad3.c)
+* [x] [Zadanie 1(lab03/zad0.c)
+* [ ] [Zadanie 2(lab03/zad1.c)
+* [ ] [Zadanie 3(lab03/zad2.c)
+* [ ] [Zadanie 4(lab03/zad3.c)
 
 
 |typ        |       wartosc min   |          wartosc max|       ziarno| precyzja|we/wy|
