@@ -23,7 +23,7 @@ Labolatorium 2(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs02/)
 * [ ] [Zadanie 2(lab02/zad2.c)
 * [ ] [Zadanie 3(lab02/zad3.c)
 
-Labolatorium 2(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
+Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 
 
 * [ ] [Zadanie 0(lab03/zad0.c)
