@@ -44,5 +44,12 @@ Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 |long double|       3.362103e-4932|       1.189731e+4932| 1.084202e-19|       18| Le  |
 
 
+Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs04/)
 
+
+
+* [ ] [Zadanie 1(lab03/zad1.c)
+* [ ] [Zadanie 2(lab03/zad2.c)
+* [ ] [Zadanie 3(lab03/zad3.c)
+* [ ] [Zadanie 4(lab03/zad4.c)
 
