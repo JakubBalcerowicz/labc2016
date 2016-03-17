@@ -1,28 +1,22 @@
-//    Napisać program, który bada poznane typy liczbowe w C; t.zn. ustala
-//
-//    ilość bajtów, przeznaczonych na zmienną (operator sizeof),
-//    największą i najmniejszą wartość liczby,
-//    ,,ziarno'', czyli najmniejszą taką liczbę x, że 1.0+x≠1.0 ,
-//    ,,precyzję'', czyli maksymalną liczbę cyfr dziesiętnych po kropce 
+// Napisać program, który bada poznane typy liczbowe w C, tzn. ustala:
+// * ilość bajtów, przeznaczonych na zmienną (operator sizeof),
+// * największą i najmniejszą wartość liczby,
+// * ,,ziarno'', czyli najmniejszą taką liczbę x, że 1.0+x≠1.0 ,
+//* ,,precyzję'', czyli maksymalną liczbę cyfr dziesiętnych po kropce.
 
-
-#include<stdio.h>
-#include<float.h>
-#include<limits.h>
-
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
 int main()
 {
-
-printf("|typ        |       wartosc min   |          wartosc max|       ziarno| precyzja|we/wy|\n");
-printf("|-----------|---------------------|---------------------|-------------|---------|-----|\n");
-printf("|short      | %20i| %20i|             |         | i   |\n",SHRT_MIN,SHRT_MAX);	
-printf("|int        | %20d| %20d|             |         | d   |\n",SHRT_MIN,SHRT_MAX);	
-printf("|long       | %20li| %20li|             |         | li  |\n",LONG_MIN,LONG_MAX);
-printf("|long long  | %20lli| %20lli|             |         | lli |\n",LLONG_MIN,LLONG_MAX);
-printf("|float      | %20e| %20e| %e|        %i| lli |\n",FLT_MIN,FLT_MAX,FLT_EPSILON,FLT_DIG);
-printf("|double     | %20e| %20e| %e|       %i| lli |\n",DBL_MIN,DBL_MAX,DBL_EPSILON,DBL_DIG);
-printf("|long double| %20Le| %20Le| %Le|       %i| Le  |\n",LDBL_MIN,LDBL_MAX,LDBL_EPSILON,LDBL_DIG);
-
-	
-
+  printf("|%11s|%8s|%21s|%21s|%13s|%10s|\n", "TYP", "ROZMIAR", "MIN", "MAX", "ZIARNO", "PRECYZJA");
+  printf("|-----------|--------|---------------------|---------------------|-------------|----------|\n");
+  printf("|%11s| %7li| %20i| %20i|%13c|%10c|\n", "short", sizeof(short), (short)SHRT_MIN, (short)SHRT_MAX, ' ', ' ');
+  printf("|%11s| %7li| %20d| %20d|%13c|%10c|\n", "int", sizeof(int), (int)INT_MIN, (int)INT_MAX, ' ', ' ');
+  printf("|%11s| %7li| %20li| %20li|%13c|%10c|\n", "long", sizeof(long), (long)LONG_MIN, (long)LONG_MAX, ' ', ' ');
+  printf("|%11s| %7li| %20lli| %20lli|%13c|%10c|\n", "long long", sizeof(long long), (long long)LLONG_MIN, (long long)LLONG_MAX, ' ', ' ');
+  printf("|%11s| %7li| %20e| %20e| %e| %9d|\n", "float", sizeof(float), (float)FLT_MIN, (float)FLT_MAX, FLT_EPSILON, (int)FLT_DIG);
+  printf("|%11s| %7li| %20le| %20le| %e| %9d|\n", "double", sizeof(double), (double)DBL_MIN, (double)DBL_MAX, DBL_EPSILON, (int)DBL_DIG);
+  printf("|%11s| %7li| %20Le| %20Le| %Le| %9d|\n", "long double", sizeof(long double), (long double)LDBL_MIN, (long double)LDBL_MAX, LDBL_EPSILON, (int)LDBL_DIG);
+  return 0;
 }
