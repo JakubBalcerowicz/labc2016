@@ -18,10 +18,10 @@ Labolatorium 1(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs01/)
 Labolatorium 2(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs02/)
 
 
-* [ ] [Zadanie 0(lab02/zad0.c)
-* [ ] [Zadanie 1(lab02/zad1.c)
-* [ ] [Zadanie 2(lab02/zad2.c)
-* [ ] [Zadanie 3(lab02/zad3.c)
+* [x] [Zadanie 0(lab02/zad0.c)
+* [x] [Zadanie 1(lab02/zad1.c)
+* [x] [Zadanie 2(lab02/zad2.c)
+* [x] [Zadanie 3(lab02/zad3.c)
 
 Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 
