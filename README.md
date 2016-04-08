@@ -48,14 +48,24 @@ Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs04/)
 
 
 
-* [ ] [Zadanie 1(lab03/zad1.c)
-* [ ] [Zadanie 2(lab03/zad2.c)
+* [ ] [Zadanie 1(lab04/zad1.c)
+* [ ] [Zadanie 2(lab04/zad2.c)
 
 
 
-Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs05/)
+Labolatorium 5(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs05/)
 
 
 
-* [ ] [Zadanie 1(lab03/zad1.c)
-* [ ] [Zadanie 2(lab03/zad2.c)
+* [ ] [Zadanie 1(lab05/zad1.c)
+* [ ] [Zadanie 2(lab05/zad2.c)
+
+
+
+Labolatorium 6(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs06/)
+
+
+
+* [ ] [Zadanie 1(lab06/zad1.c)
+* [ ] [Zadanie 2(lab06/zad2.c)
+
