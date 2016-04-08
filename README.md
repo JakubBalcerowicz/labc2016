@@ -50,4 +50,11 @@ Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs04/)
 
 * [ ] [Zadanie 1(lab03/zad1.c)
 * [ ] [Zadanie 2(lab03/zad2.c)
+* 
 
+Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs05/)
+
+
+
+* [ ] [Zadanie 1(lab03/zad1.c)
+* [ ] [Zadanie 2(lab03/zad2.c)
