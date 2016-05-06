@@ -69,3 +69,20 @@ Labolatorium 6(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs06/)
 * [ ] [Zadanie 1(lab06/zad1.c)
 * [ ] [Zadanie 2(lab06/zad2.c)
 
+Labolatorium 7(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs07/)
+
+* [ ] [Zadanie 1(lab06/zad1.c)
+* [ ] [Zadanie 23(lab06/zad23.c)
+
+Labolatorium 8(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs08/)
+
+* [ ] [Zadanie 1(lab03/zad1.c)
+* [ ] [Zadanie 2(lab03/zad2.c)
+* [ ] [Zadanie 3(lab03/zad3.c)
+* [ ] [Zadanie 4(lab03/zad4.c)
+
+
+
+
+
+
