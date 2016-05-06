@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (int ile_arg, char* arg[ ]) {
+int main (int count, char* arg[ ]) {
     int i;
-    for(i=ile_arg-1; i>0; i--){
-        printf(" %s", arg[i]);
+    for(i=count; i>1; i--){
+		if(i==count){
+			printf("%s", arg[i-1]);
         }
+        else
+			printf(" %s", arg[i-1]);
+	}
 printf("\n");
 return 0;
 }
