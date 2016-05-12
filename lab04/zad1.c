@@ -1,37 +1,31 @@
-/*
-Opracować zestaw operacji na liczbach zespolonych potrzebny do prawidłowego działania tego programu.
-W tym celu należy prototypy (nagłówki) podanych tam funkcji, realizujących działania, zastąpić lub uzupełnić pełnymi definicjami działań.
-Oczywiście dla napisania tych funkcji, potrzebne jest zastosowanie własnej wiedzy o liczbach zespolonych (np. z algebry). 
-*/
-
-/* gcc -Wall zad1.c -o zad1 -lm */
+// Opracować zestaw operacji na liczbach zespolonych potrzebny do prawidłowego działania tego programu.
+// W tym celu należy prototypy (nagłówki) podanych tam funkcji, realizujących działania, zastąpić lub uzupełnić pełnymi definicjami działań.
+// Oczywiście dla napisania tych funkcji, potrzebne jest zastosowanie własnej wiedzy o liczbach zespolonych (np. z algebry).
 
 #include <stdio.h>
 #include <math.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <complex.h>
-
-
-//"struktura" liczby zespolonej :
+/****************************************************************/
+// DEFINICJA TYPU LICZB ZESPOLONYCH:
 typedef struct
 {
   double rea, ima;
 } zespol;
-
-/*
-pomocnicza funkcja przy uzyskaniu błedu wywołana w elsie (w funkcji zespol zesp_get(void), 
-gdy uzytkownik niepoprawnie wpisze postac liczby zespolonej.
-*/
-
+/****************************************************************/
+// POMOCNICZE:
 void err(char s[])
 {
+  // -- sygnalizacja bledu wejscia
   printf("\n!!! FUNKCJA zesp_get: %s !!!\n\n", s);
   exit(1);
 }
-
+/****************************************************************/
+// INICJALIZACJE oraz WEJSCIE-WYJSCIE:
 zespol zesp_zestawic(double r, double i)
 {
+  // zestawienie liczby zespolonej z dwoch rzeczywistych
   zespol z;
   z.rea=r;
   z.ima=i;
@@ -39,27 +33,42 @@ zespol zesp_zestawic(double r, double i)
 }
 zespol zesp_get(void)
 {
-  /* wczytanie liczby zespolonej; 
-  w postaci (X + Yi), gdzie X, Y - rzeczywiste, dopisanie "i" wymagane (liczba imaginalis) */
+  /* wczytanie liczby zespolonej; powinna skladac sie z dwoch
+  rzeczywistych, oraz plusa lub minusa miedzy nimi, zaczynac sie od
+  nawiasu otwierajacego, konczyc sie litera ,,i'' oraz nawiasem
+  zamykajacym;
+  np. (123.45 + 67.89i) */
   char ch;
   zespol z;
   int znak_im;
-  do{ch=getchar();} while(isspace(ch));
+  do
+  {
+    ch=getchar();
+  } while(isspace(ch));
   if(ch=='(')
   {
     if(scanf("%lf", &(z.rea))==1)
     {
-      do{ch = getchar();} while(isspace(ch));
+      do
+      {
+        ch = getchar();
+      } while(isspace(ch));
       if(ch=='+' || ch=='-')
       {
         if(ch=='+') znak_im=1;
         else znak_im=-1;
         if(scanf("%lf", &(z.ima))==1)
         {
-          do{ch=getchar();} while(isspace(ch));
+          do
+          {
+            ch=getchar();
+          } while(isspace(ch));
           if(ch=='i')
           {
-            do{ch=getchar();} while(isspace(ch));
+            do
+            {
+              ch=getchar();
+            } while(isspace(ch));
             if(ch==')')
             {
               if(znak_im==-1) z.ima=-z.ima;
@@ -73,73 +82,56 @@ zespol zesp_get(void)
 }
 void zesp_print(zespol z)
 {
+  // drukowanie liczby zespolonej
   if(z.ima>=0) printf("(%.2lf+%.2lfi)", z.rea, z.ima);
   else printf("(%.2lf-%.2lfi)", z.rea, -z.ima);
 }
-
-/*
-Postac liczb zespolonych :
-z1 = a + bi;
-z2 = c + di;
-gdzie a, b, c, d sa rzeczywiste
-Wykorzystane wzory do utworzenia funkcji : 
-- Dodawanie : z1 + z2 = (a + c) + (b + d)i;
-- Odejmowanie : z1 - z2 = (a - c) + (b - d)i;
-- Mnożenie : z1 * z2 = (ac - bd) + (ad + bc)i;
-- Sprzezenie : z1S = a - bi;
-- Moduł : |z| = |a + bi| = sqrt/pierwiastek (a^2 + b^2);
-*/
-
-
-// dodawanie liczb zespolonych  :
+/****************************************************************/
+// DZIALANIA:
 zespol zesp_dodac(zespol z1, zespol z2)
 {
-  zespol wynik;
-  wynik.rea=z1.rea+z2.rea;
-  wynik.ima=z1.ima+z2.ima;
-  return wynik;
+  zespol wyn;
+  wyn.rea=z1.rea+z2.rea;
+  wyn.ima=z1.ima+z2.ima;
+  return wyn;
 }
-
-// odejmowanie liczb zespolonych :
+// dodawanie liczb zespolonych
 zespol zesp_odjac(zespol z1, zespol z2)
 {
-  zespol wynik;
-  wynik.rea=z1.rea-z2.rea;
-  wynik.ima=z2.ima-z2.ima;
-  return wynik;
+  zespol wyn;
+  wyn.rea=z1.rea-z2.rea;
+  wyn.ima=z2.ima-z2.ima;
+  return wyn;
 }
-
-// mnozenie liczb zespolonych :
+// odejmowanie liczb zespolonych
 zespol zesp_razy(zespol z1, zespol z2)
 {
-  zespol wynik;
-  wynik.rea=z1.rea*z2.rea-z1.ima*z2.ima;
-  wynik.ima=z1.rea*z2.ima+z1.ima*z2.rea;
-  return wynik;
+  zespol wyn;
+  wyn.rea=z1.rea*z2.rea-z1.ima*z2.ima;
+  wyn.ima=z1.rea*z2.ima+z1.ima*z2.rea;
+  return wyn;
 }
-
-// liczba sprzezona do danej zespolonej :
+// mnozenie liczb zespolonych
 zespol zesp_sprzez(zespol z)
 {
-  zespol wynik;
-  wynik.ima=-z.ima;
-  return wynik;
+  zespol wyn;
+  wyn.ima=-z.ima;
+  return wyn;
 }
-
-// wartosc bezwzgledna liczby zespolonej , tzw. "moduł":
+// liczba sprzezona do danej zespolonej
 double zesp_abs(zespol z)
 {
-  double wynik;
-  wynik=sqrt(z.rea*z.rea+z.ima*z.ima);
-  return wynik;
+  double wyn;
+  wyn=sqrt(z.rea*z.rea+z.ima*z.ima);
+  return wyn;
 }
-
-
+// wartosc bezwzgledna liczby zespolonej
+/****************************************************************/
 int main()
 {
   zespol z1, z2;
-  printf("Zespolona Z1 == "); z1 = zesp_get();
-  printf("Zespolona Z2 == "); z2 = zesp_get();
+  printf("Z1 == "); z1 = zesp_get();
+  printf("Z2 == "); z2 = zesp_get();
   printf("\nZ1+Z2 == "); zesp_print(zesp_dodac(z1, z2));
   printf("\nZ1-Z2 == "); zesp_print(zesp_odjac(z1, z2));
   printf("\nZ1*Z2 == "); zesp_print(zesp_razy(z1, z2));
