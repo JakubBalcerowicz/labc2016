@@ -9,7 +9,7 @@ Jezyki Programowania, rok 1
 Labolatorium 1(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs01/)
 * [x] [Zadanie 1(lab01/zad1.c)
 * [x] [Zadanie 2(lab01/zad2.c)
-* [ ] [Zadanie 3(lab01/zad3.c)
+* [x] [Zadanie 3(lab01/zad3.c)
 * [x] [Zadanie 4(lab01/zad4.c)
 * [x] [Zadanie 5(lab01/zad5.c)
 * [x] [Zadanie 6(lab01/zad6.c)
@@ -28,9 +28,9 @@ Labolatorium 3(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs03/)
 
 
 * [x] [Zadanie 1(lab03/zad1.c)
-* [ ] [Zadanie 2(lab03/zad2.c)
-* [ ] [Zadanie 3(lab03/zad3.c)
-* [ ] [Zadanie 4(lab03/zad4.c)
+* [x] [Zadanie 2(lab03/zad2.c)
+* [x] [Zadanie 3(lab03/zad3.c)
+* [x] [Zadanie 4(lab03/zad4.c)
 
 
 |typ        |       wartosc min   |          wartosc max|       ziarno| precyzja|we/wy|
@@ -48,8 +48,8 @@ Labolatorium 4(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs04/)
 
 
 
-* [ ] [Zadanie 1(lab04/zad1.c)
-* [ ] [Zadanie 2(lab04/zad2.c)
+* [x] [Zadanie 1(lab04/zad1.c)
+* [x] [Zadanie 2(lab04/zad2.c)
 
 
 
@@ -57,8 +57,8 @@ Labolatorium 5(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs05/)
 
 
 
-* [ ] [Zadanie 1(lab05/zad1.c)
-* [ ] [Zadanie 2(lab05/zad2.c)
+* [x] [Zadanie 1(lab05/zad1.c)
+* [x] [Zadanie 2(lab05/zad2.c)
 
 
 
@@ -66,20 +66,20 @@ Labolatorium 6(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs06/)
 
 
 
-* [ ] [Zadanie 1(lab06/zad1.c)
+* [x] [Zadanie 1(lab06/zad1.c)
 * [ ] [Zadanie 2(lab06/zad2.c)
 
 Labolatorium 7(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs07/)
 
-* [ ] [Zadanie 1(lab06/zad1.c)
-* [ ] [Zadanie 23(lab06/zad23.c)
+* [x] [Zadanie 1(lab06/zad1.c)
+* [x] [Zadanie 23(lab06/zad23.c)
 
 Labolatorium 8(https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/Labs08/)
 
-* [ ] [Zadanie 1(lab03/zad1.c)
-* [ ] [Zadanie 2(lab03/zad2.c)
-* [ ] [Zadanie 3(lab03/zad3.c)
-* [ ] [Zadanie 4(lab03/zad4.c)
+* [x] [Zadanie 1(lab03/zad1.c)
+* [x] [Zadanie 2(lab03/zad2.c)
+* [x] [Zadanie 3(lab03/zad3.c)
+* [x] [Zadanie 4(lab03/zad4.c)
 
 
 
