@@ -5,5 +5,5 @@ INFO(Polsce, zloty)
 INFO(Rosji, rubel)
 INFO(Slowacji, euro)
 
-// Program wypisze kolejno:
+// Program wypisze:
 // W Polsce OBOWIAZUJE zloty. W Rosji OBOWIAZUJE rubel. W Slowacji OBOWIAZUJE euro.
