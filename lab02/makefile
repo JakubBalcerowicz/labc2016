@@ -1,11 +1,10 @@
-sources = zad0.c za1.c zad2.c zad3-1.c zad3-2.c
+sources =  zad0.c zad1.c zad2.c zad3.c zad3a.c
 
 programs = $(basename $(sources))
 objects = $(addsuffix .o, $(programs))
 
-CFLAGS = -Wall -std=c11 -I /opt/X11/include
-LDFLAGS = -L /opt/X11/lib
-LDLIBS = -lGL -lGLU -lglut -lm
+CFLAGS = -Wall -std=c11
+LDLIBS = -lm
 
 .PHONY : clean
 clean :
