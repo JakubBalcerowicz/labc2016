@@ -1,152 +1,137 @@
+// Proszę napisać program porzadkuj.c, którego wywołanie np. takie:   ./porzadkuj jedna_z_baz wynik_porzadkowania 
+// posortuje wskazaną bazę jedna_z_baz (alfabetycznie wg nazwisk, a dla równych nazwisk wg imion)
+// i zapisze wynik sortowania na nowo utworzony plik   wynik_porzadkowania.
+// W programie z zadania 2 wymienić funkcję sortowanie na możliwie szybko działającą (np. bubble-sort na merge-sort).
+// Dla oceny szybkości działania programu można zaraz przed rozpoczęciem sortowania umieścić komendę: clock_t  pocz = clock();
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include<time.h>
-
+#include <time.h>
 #define IMIE_MAX 20
 #define NAZW_MAX 20
 #define IL_OSOB 10000
-
-typedef struct {
-    char imie[IMIE_MAX+1];
-    char nazwisko[NAZW_MAX+1];
-    int pensja;
+typedef struct
+{
+  char imie[IMIE_MAX+1];
+  char nazwisko[NAZW_MAX+1];
+  int pensja;
 } osoba;
-
 osoba spis[IL_OSOB];
-
 //=======================================================
-
 void utworz_spis(char *name, int *linie)
 {
-    FILE *baza = fopen(name, "r");
-    if (baza == NULL)
-	printf("\nCOS SIE ZEPSULO!\n\n");
-    int i;
-    for (i = 0; i < *linie; i++) {
-	fscanf(baza, "%s", spis[i].imie);
-	fscanf(baza, "%s", spis[i].nazwisko);
-	fscanf(baza, "%i", &spis[i].pensja);
-    }
-    fclose(baza);
+  FILE *baza = fopen(name, "r");
+  if(baza == NULL) printf("\nCOS SIE ZEPSULO!\n\n");
+  int i;
+  for(i = 0; i < *linie; i++)
+  {
+    fscanf(baza, "%s", spis[i].imie);
+    fscanf(baza, "%s", spis[i].nazwisko);
+    fscanf(baza, "%i", &spis[i].pensja);
+  }
+  fclose(baza);
 }
-
 //=======================================================
-
-int ilosc_linii(char *name)
+int lines(char *name)
 {
-        int linie = 0;
-        FILE* plik;
-        plik = fopen(name, "r");
-        int w;
-        do{
-                fscanf(plik, "%s", spis[linie].imie);
-                fscanf(plik, "%s", spis[linie].nazwisko);
-        w =     fscanf(plik, "%i", &spis[linie].pensja);
-        linie++;
-        }while(w  != EOF);
-        fclose(plik);
-        return linie-1;
+  int linie = 0;
+  FILE* plik;
+  plik = fopen(name, "r");
+  int w;
+  do
+  {
+    fscanf(plik, "%s", spis[linie].imie);
+    fscanf(plik, "%s", spis[linie].nazwisko);
+    w = fscanf(plik, "%i", &spis[linie].pensja);
+    linie++;
+  } while(w != EOF);
+  fclose(plik);
+  return linie-1;
 }
-
 //=======================================================
-
-int my_compare(const void *a, const void *b)
+int compare(const void *a, const void *b)
 {
-    osoba *osoba_a, *osoba_b;
-    osoba_a = (osoba *) a;
-    osoba_b = (osoba *) b;
-
-    return strcmp(osoba_a->nazwisko, osoba_b->nazwisko);
+  osoba *osoba_a, *osoba_b;
+  osoba_a = (osoba *) a;
+  osoba_b = (osoba *) b;
+  return strcmp(osoba_a->nazwisko, osoba_b->nazwisko);
 }
-
 //=======================================================
-void sortuj_qsort(int *linie)
+void sort_qsort(int *linie)
 {
-    qsort(spis, *linie, sizeof(osoba), my_compare);
-    FILE *baza2 = fopen("qsort.txt", "w");
-    int i;
-    for (i = 0; i < *linie; i++) {
-	fprintf(baza2, "%20s	", spis[i].imie);
-	fprintf(baza2, "%20s	", spis[i].nazwisko);
-	fprintf(baza2, "%20i\n", spis[i].pensja);
-    }
-    fclose(baza2);
+  qsort(spis, *linie, sizeof(osoba), compare);
+  FILE *baza_q = fopen("qsort.txt", "w");
+  int i;
+  for(i = 0; i < *linie; i++)
+  {
+    fprintf(baza_q, "%20s ", spis[i].imie);
+    fprintf(baza_q, "%20s ", spis[i].nazwisko);
+    fprintf(baza_q, "%20i\n", spis[i].pensja);
+  }
+  fclose(baza_q);
 }
-
 //=======================================================
-
-
-void sortuj_bubble(int *linie)
+void sort_bubble(int *linie)
 {
   int i, j;
-  char pom[NAZW_MAX+1];
-  for(i=1;i<=*linie;i++)
+  char temp[NAZW_MAX+1];
+  for(i = 1; i <= *linie; i++)
   {
-    for(j=i;j<*linie;j++)
+    for(j = i;j < *linie; j++)
     {
-      if(strcmp(spis[j-1].nazwisko, spis[j].nazwisko)>0)
+      if(strcmp(spis[j-1].nazwisko, spis[j].nazwisko) > 0)
       {
-        strcpy(pom, spis[j-1].nazwisko);
+        strcpy(temp, spis[j-1].nazwisko);
         strcpy(spis[j-1].nazwisko, spis[j].nazwisko);
-        strcpy(spis[j].nazwisko, pom);
+        strcpy(spis[j].nazwisko, temp);
       }
-      else if(strcmp(spis[j-1].nazwisko,spis[j].nazwisko)==0)
+      else if(strcmp(spis[j-1].nazwisko, spis[j].nazwisko) == 0)
       {
-        strcpy(pom,spis[j-1].imie);
+        strcpy(temp, spis[j-1].imie);
         strcpy(spis[j-1].imie, spis[j].imie);
-        strcpy(spis[j].imie, pom);
+        strcpy(spis[j].imie, temp);
       }
     }
   }
-  FILE* baza3=fopen("bubblesort.txt","w");
-  for(i=0;i<*linie;i++)
+  FILE* baza_b = fopen("bubblesort.txt", "w");
+  for(i = 0; i < *linie; i++)
   {
-	fprintf(baza3, "%20s	", spis[i].imie);
-	fprintf(baza3, "%20s	", spis[i].nazwisko);
-	fprintf(baza3, "%20i\n", spis[i].pensja);
+    fprintf(baza_b, "%20s ", spis[i].imie);
+    fprintf(baza_b, "%20s ", spis[i].nazwisko);
+    fprintf(baza_b, "%20i\n", spis[i].pensja);
   }
-  fclose(baza3);
+  fclose(baza_b);
 }
-
-
 //=======================================================
-
-int main (int ile_arg, char* arg[])
+int main(int args, char* arg[])
 {
- if(ile_arg == 2)
- {
-  char nazwa[100];
-  sscanf(arg[1], "%s", nazwa);
-  int ilosc;
-  ilosc = ilosc_linii(nazwa);
-  if(ilosc > IL_OSOB)
+  if(args == 2)
   {
-    printf("Za duzo osob! Nie dam rady!\n");
+    char name[100];
+    sscanf(arg[1], "%s", name);
+    int l;
+    l = lines(name);
+    if(l > IL_OSOB)
+    {
+      printf("Za duzo osob! Nie dam rady!\n");
+      return 0;
+    }
+    printf("Zeskanowalem %i linii z pliku %s\n", l, arg[1]);
+    utworz_spis(name, &l);
+    clock_t begin = clock();
+    sort_qsort(&l);
+    clock_t end = clock();
+    printf("\nCzas wykonania qsorta: %lf sek.\n\n", (double)(end-begin)/CLOCKS_PER_SEC);
+    clock_t begin2 = clock();
+    sort_bubble(&l);
+    clock_t end2 = clock();
+    printf("\nCzas wykonania bubble: %lf sek.\n\n", (double)(end2-begin2)/CLOCKS_PER_SEC);
+    printf("\nPosortowane!\n\n");
     return 0;
-  }
-  printf("Zeskanowalem %i linii z pliku %s\n", ilosc, arg[1]);
-  utworz_spis(nazwa, &ilosc);
-  clock_t  pocz1 = clock();
-  sortuj_qsort(&ilosc);
-  clock_t  koniec1 = clock();
-  printf("\nCzas wykonania qsorta: %lf sek.\n\n",
-         (double)(koniec1-pocz1) / CLOCKS_PER_SEC
-        );
-  clock_t  pocz2 = clock();
-  sortuj_bubble(&ilosc);
-  clock_t  koniec2 = clock();
-  printf("\nCzas wykonania bubble: %lf sek.\n\n",
-         (double)(koniec2-pocz2) / CLOCKS_PER_SEC
-        );
-
-  printf("\nPosortowane!\n\n");
+  } else printf("\nNiepoprawne wywolanie programu!\n");
+  printf("Wywolanie programu wymaga argumentu!\n");
+  printf("./zad2b nazwapliku(lub lokalizacja pliku)!\n");
   return 0;
- }
- else
-    printf("\nNiepoprawne wywolanie programu!\n");
-    printf("Wywolanie programu wymaga argumentu!\n");
-    printf("./zad2b nazwapliku(lub lokalizacja pliku)!\n");
- return 0;
 }
