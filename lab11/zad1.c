@@ -1,7 +1,8 @@
-Zadanie 1:
+/*Zadanie 1:
 Napisać program w C wczytujący liczbę naturalną n≤3 i rysujący przy pomocy OpenGL n-kąt foremny.
 Uwaga:
 n-kąt nazywa się foremny, jeśli ma wszystkie boki równej długości i wszystkie kąty równe.
+*/
 
 #include <GL/glut.h>
 #include <stdlib.h>
