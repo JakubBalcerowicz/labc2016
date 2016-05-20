@@ -1,4 +1,4 @@
-*/Zadanie 2:
+/*Zadanie 2:
 Omawiany na wykładzie rysunek wprawki04.c poprawić w ten sposób,
 żeby ,,kamera'' znajdowała się trochę wyżej (ponad y=1), tak aby oprócz ściany frontowej sześcianu była (w skrócie perspektywicznym) widoczna jego ściana górna,
 żeby sześcian powoli wirował wokół osi y,
