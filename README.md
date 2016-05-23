@@ -1,7 +1,9 @@
 # labc2016
 Labolatorium z C 2016/2017
 
-[lab3/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab03/zad1.c)
+[ULUBIONE]
+* [lab3/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab03/zad1.c) 
+* 
 
 Zadania https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/index.html#lab
 
