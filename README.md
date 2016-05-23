@@ -2,8 +2,9 @@
 Labolatorium z C 2016/2017
 
 [ULUBIONE]
-* [lab3/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab03/zad1.c) 
-* 
+* [lab3/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab03/zad1.c) gotowa tabelka
+* [lab5/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab05/zad01.c) funkcja void iloraz i reszta
+* [lab9/zad1](https://github.com/JakubBalcerowicz/labc2016/blob/master/lab09/kalkulator.php) prosty kalkulator
 
 Zadania https://inf.ug.edu.pl/~stefan/Dydaktyka/JezProg/Slajdy/index.html#lab
 
